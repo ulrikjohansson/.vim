@@ -7,7 +7,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'tpope/vim-fugitive'
+Plugin 'file:///~/.vim/bundle/vim-fugitive'
 
 call vundle#end()
 
