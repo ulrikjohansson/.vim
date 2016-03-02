@@ -15,6 +15,7 @@ Plugin 'tpope/vim-fugitive', {'pinned': 1}
 Plugin 'vim-airline/vim-airline', {'pinned': 1}
 Plugin 'vim-airline/vim-airline-themes', {'pinned': 1}
 Plugin 'scrooloose/syntastic', {'pinned': 1}
+Plugin 'tpope/vim-sleuth', {'pinned': 1}
 call vundle#end()
 
 filetype plugin indent on
