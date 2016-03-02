@@ -35,14 +35,18 @@ This will give a list like this:
 #### Detailed explanation
 The plugins are added as subtrees with [git subtree](https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt).
 In order to keep track of where these plugins live, I've included them as remotes. So the first thing to do is add a new remote to the repo:  
+
 General case:  
 `git remote add [remote name] [remote location]`
+
 Example:  
 `git remote add vim-sleuth https://github.com/tpope/vim-sleuth.git`
 
 That takes care of where the plugin source is located so we don't have to remember it next time we want to update it. Next step is actually adding the plugin as a subtree:
+
 General case:  
 `git subtree add --prefix [path to the plugin top-dir] [remote name] [branch] --squash`
+
 Example:  
 `git subtree add --prefix .vim/bundle/vim-sleuth vim-sleuth master --squash`
 
