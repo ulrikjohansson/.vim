@@ -10,9 +10,13 @@ Everything in here is a blatant ripoff of an [Atlassian blog post][2]
 ## Useful commands
 ### Checking which subtrees are actually included in the repo
 There is no easy way to do this currently, since the subtree functionality is apparently just a big shell script atm, but I found this little snippet on [stack overflow][1]
-`git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq | xargs -I {} bash -c 'if [ -d $(git rev-parse --show-toplevel)/{} ] ; then echo {}; fi'`
 
-This will give list like this:
+```
+git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq | xargs -I {} bash -c 'if [ -d $(git rev-parse --show-toplevel)/{} ] ; then echo {}; fi'
+```
+
+This will give a list like this:
+
 ```
 .vim/bundle/syntastic
 .vim/bundle/vim-airline
@@ -27,6 +31,7 @@ This will give list like this:
 2. `git subtree add [remote] --prefix [path] [remote] [branch] --squash`
 3. In .vimrc: `Plugin 'tpope/vim-sleuth', {'pinned': 1}`
 4. In Vim: `PluginInstall`
+
 #### Detailed explanation
 The plugins are added as subtrees with [git subtree](https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt).
 In order to keep track of where these plugins live, I've included them as remotes. So the first thing to do is add a new remote to the repo:  
