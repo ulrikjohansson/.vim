@@ -88,6 +88,5 @@ Example:
 
 The trick here is to keep track of which where a specific subtree is located in our repo. For an explanation of how to find this out, see [checking which subtrees are actually included in this repo](Checking which subtrees are actually included in the repo)
  
-### References
 [1]: http://stackoverflow.com/a/18339297/306458
 [2]: http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/
