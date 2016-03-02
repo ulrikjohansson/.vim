@@ -66,8 +66,28 @@ The `pinned` setting makes sure Vundle doesn't try to pull the plugin from githu
 And lastly, in Vim we run the Vundle command `PluginInstall` to actually load the plugin into vim. This only needs to be run when installing/updating new plugins, not every time you start Vim.
 
 ### Updating an existing plugin
-TODO!
+#### Quick info
+1. `git fetch [remote] [branch]`
+2. `git subtree pull --prefix [path] [remote] [branch] --squash`
 
+#### Detailed explanation
+In order to update a plugin you need to fetch the remote changes as usual with `git fetch [remote] [branch]`.
+
+Example:
+`git fetch vim-sleuth master`
+
+Omitting the branch would also work, but we don't want to bloat our repo more than needed, so we just pick a specific branch.
+
+Then we need to update the actual subtree in our repo. This is done with `git subtree pull`.
+
+General case:
+`git subtree pull --prefix [path] [remote] [branch] --squash`
+
+Example:
+`git subtree pull --prefix .vim/bundle/vim-sleuth vim-sleuth master --squash`
+
+The trick here is to keep track of which where a specific subtree is located in our repo. For an explanation of how to find this out, see [checking which subtrees are actually included in this repo](Checking which subtrees are actually included in the repo)
+ 
 ### References
 [1]: http://stackoverflow.com/a/18339297/306458
 [2]: http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/
