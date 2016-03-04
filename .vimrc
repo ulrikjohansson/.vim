@@ -16,10 +16,15 @@ Plugin 'vim-airline/vim-airline', {'pinned': 1}
 Plugin 'vim-airline/vim-airline-themes', {'pinned': 1}
 Plugin 'scrooloose/syntastic', {'pinned': 1}
 Plugin 'tpope/vim-sleuth', {'pinned': 1}
+Plugin 'altercation/vim-colors-solarized', {'pinned': 1}
 call vundle#end()
 
 filetype plugin indent on
 syntax on
+
+" Solarized theme settings
+set background=dark
+colorscheme solarized
 
 " Airline settings
 
