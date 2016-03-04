@@ -33,7 +33,8 @@ colorscheme solarized
 set laststatus=2
 
 set encoding=utf-8
-let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Syntastic settings
 set statusline+=%#warningmsg#
