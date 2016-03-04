@@ -21,6 +21,7 @@ call vundle#end()
 
 filetype plugin indent on
 syntax on
+set number
 
 " Solarized theme settings
 set background=dark
